@@ -54,7 +54,7 @@
         foreach (int n in lista)
         {
             if (n >= 20 && n <= 70 ){
-                <li>@n</li>
+                        <li>@n</li>
             }
         }
     }
@@ -65,9 +65,35 @@
      5. Stampare in pagina la data e l'ora attuale (usando la classe DateTime) con il formato anno-mese-giorno ore:minuti:secondi
 </p>
 <span>Oggi è il @DateTime.Now.ToString("yyy-MM-dd HH:mm:ss")</span>
+
+
 <p>
     6. Partendo dalla data di oggi (usando la classe DateTime) stampare in pagina
-    a. la data di 7 giorni fa
-    b. che giorno della settimana è oggi (il risultato dovrà essere il nome del giorno (Lunedì, Martedì, ...)
-    c. che giorno della settimana sarà nello stesso giorno e mese di oggi ma tra un anno (il risultato dovrà essere il nome del giorno (Lunedì, Martedì, ...)
+    <ul>
+        <li>
+            a. la data di 7 giorni fa
+        </li>
+        <li>
+            b. che giorno della settimana è oggi (il risultato dovrà essere il nome del giorno (Lunedì, Martedì, ...)
+        </li>
+
+        <li>
+            c. che giorno della settimana sarà nello stesso giorno e mese di oggi ma tra un anno (il risultato dovrà essere il nome del giorno (Lunedì, Martedì, ...)
+        </li>
+    </ul>
+    
+    
 </p>
+
+<ul>
+    <li>
+        7 giorni fa era @DateTime.Now.Date.AddDays(-7).ToString("dd-MM-yyyy");
+    </li>
+    <li>
+        b. oggi è @DateTime.Now.ToString("dddd");
+    </li>
+
+    <li>
+        c. tra un anno sarà @DateTime.Now.Date.AddYears(1).ToString("dddd")
+    </li>
+</ul>
